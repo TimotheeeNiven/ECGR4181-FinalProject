@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build assignment",
             "type": "shell",
             "command": "g++",
             "args": [
@@ -17,6 +17,24 @@
             },
             "problemMatcher": ["$gcc"],
             "detail": "Compiles the main.cpp file using g++"
+        },
+        {
+            "label": "build testing",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/testing.cpp",
+                "${workspaceFolder}/ram.cpp",
+                "-o",
+                "${workspaceFolder}/testing"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compiles the testing.cpp file with debugging enabled."
         }
     ]
 }
